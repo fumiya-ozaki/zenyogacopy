@@ -1,0 +1,260 @@
+// ボーダーボックス設定
+*{box-sizing:border-box;}
+
+// フォント読み込み
+*{font-family: 'M PLUS 1p', ;}
+
+//全体適用
+a{text-decoration: none;}
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+li{
+  list-style: none;
+}
+
+// 改行
+//PC/スマホで改行
+@media screen and (min-width: 480px){
+  .br-pc { display:block; }
+  .br-sp { display:none; }
+}
+// <br class="br-pc" />
+//スマホで改行
+@media screen and (max-width: 480px){	
+  .br-pc { display:none; }
+  .br-sp { display:block; }
+}
+// <br class="br-sp" />
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// 色変数
+$main-orange:rgb(235,185,77);
+$sub-orange:rgb(254,245,224);
+$pink:rgb(218,106,99);
+$a:gray;
+$b:blue;
+
+@media screen and (min-width:960px) { //PC
+  .header1{
+    background-color: rgb(62,61,61);
+    color: rgb(255,255,255);
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      border-bottom:solid rgb(100,100,100) 1px ;
+      &__right{
+        display: flex;
+        &__tel{}
+        &__new{}
+        &__experience{
+          background-color:rgb(248,145,64);
+        }
+        &__experience:hover{
+          background-color: red;
+        }
+        a{
+          color: white;
+        }
+      }
+      &__left{}
+    }
+    &__bottom{
+      p{float: right;}
+      &__schedule{}
+      &__login{}
+    }
+  }
+.header2{
+  display: flex;
+  justify-content: space-between;
+  &__logo{}
+  &__nav{
+    ul{
+      li{
+        display: inline-block;
+        a{color: black;}
+      }
+    }
+  }
+}
+
+.main-visual{
+  background-color: rgb(245,245,245);
+  &__slider{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.main-theme{
+  text-align: center;
+  &__title{
+  }
+  &__contents{
+    display: flex;
+    justify-content: space-between;
+    &__box{
+      width: 30%;
+      border: solid 1px rgb(221, 218, 218);
+      &__image{
+        img{
+          width: 100%;
+        }
+      }
+      &__title{}
+      &__text{}
+    }
+  }
+}
+
+.recommend-contents{
+  text-align: center;
+  &__title{}
+  &__contents{
+    .container{
+      list-style: none;
+      margin: 0 auto;
+      width: 100%;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      -ms-grid-row: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap:20px;
+      .item{}
+      img{width: 100%;}
+      p{
+        text-align: left;
+      }
+    }
+  }
+}
+
+.mission{
+  text-align: center;
+  &__new{
+    &__title{}
+    &__text{}
+  }
+  &__key{
+    &__title{
+
+    }
+    &__contents{
+      display: flex;
+    }
+  }
+}
+
+.feature{
+  text-align: center;
+  &_title{}
+  &__contents{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    &__box{
+      width: 30%;
+      &__image{
+        img{
+          width: 100%;
+        }
+      }
+      &__title{}
+      &__text{}
+    }
+  }
+}
+
+.lesson{
+  text-align: center;
+  &__title{}
+  .container{
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    -ms-grid-row: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap:20px;
+    .item{}
+    img{width: 100%;}
+    p{
+      text-align: left;
+    }
+  }
+}
+
+.info{
+  text-align: center;
+  &__title{}
+  &__studio-list{}
+  &__contents{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sns{
+  text-align: center;
+  &__icon{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.link{
+  .container{
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    -ms-grid-row: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap:20px;
+    .item{}
+    img{width: 100%;}
+    p{
+      text-align: left;
+    }
+  }
+}
+
+.studio-lists{
+  text-align: center;
+  &__top{
+    display: flex;
+    justify-content: center;
+  }
+  &__bottom{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    a{display: inline-block;}
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+} //PC
+@media screen and (max-width:480px) {} //スマホ
+@media screen and (min-width:481px) and (max-width:959px){} //タブレット
